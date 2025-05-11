@@ -4,6 +4,7 @@ import page from 'page';
 
 import App from './App.svelte';
 import Overview from './lib/Overview.svelte';
+import Counter from './lib/TestCounter.svelte';
 
 // Debug: Cek apakah target element ada
 console.log('Target element:', document.getElementById('app'));
@@ -33,6 +34,11 @@ page('/', () => {
 page('/overview', () => {
   console.log('Routing ke /overview');
   render(Overview);
+});
+
+page('/counter', () => {
+  console.log('Routing ke /counter');
+  render(Counter);
 });
 
 // Fallback untuk 404
